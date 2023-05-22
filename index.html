@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cumhurbaşkanlığı Seçim Uygulaması</title>
+</head>
+<body>
+    <form method="POST" action="/">
+        <label for="district_combo">İlçe Seçin:</label>
+        <select id="district_combo" name="district_combo">
+            {% for district in districts %}
+            <option value="{{ district }}">{{ district }}</option>
+            {% endfor %}
+        </select>
+        <!-- Diğer form alanları -->
+        <input type="submit" value="Sonucu Gör">
+    </form>
+</body>
+</html>
